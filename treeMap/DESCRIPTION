@@ -1,0 +1,10 @@
+Package: treeMap
+Title: Generate tree maps from excel table.
+Description: treeMap is a set of function that automatically generates tree maps
+             for each sheet in a given excel file.
+Version: 0.1
+Maintainer: Claudia Vitolo <claudia.vitolo@gmail.com>
+Author: Claudia Vitolo <claudia.vitolo@gmail.com>
+Depends: R (>= 3.0.2), XLConnect, RJSONIO
+License: GPL-3
+LazyData: true
