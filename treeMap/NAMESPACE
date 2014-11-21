@@ -1,1 +1,3 @@
+import(RJSONIO)
+import(XLConnect)
 exportPattern("^[[:alpha:]]+")

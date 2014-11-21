@@ -1,10 +1,16 @@
 Package: treeMap
+Type: Package
+Version: 0.2
 Title: Generate tree maps from excel table.
-Description: treeMap is a set of function that automatically generates tree maps
-             for each sheet in a given excel file.
-Version: 0.1
-Maintainer: Claudia Vitolo <claudia.vitolo@gmail.com>
-Author: Claudia Vitolo <claudia.vitolo@gmail.com>
-Depends: R (>= 3.0.2), XLConnect, RJSONIO
+Description: The package treeMap contains a set of functions to automatically
+    generate D3.js tree maps for each sheet in a given excel file.
+URL: https://github.com/cvitolo/r_treemap
+BugReports: https://github.com/cvitolo/r_treemap/issues
+Depends:
+    R (>= 3.0.2),
+    XLConnect,
+    RJSONIO
 License: GPL-3
 LazyData: true
+Author: Claudia Vitolo
+Maintainer: Claudia Vitolo <cvitolodev@gmail.com>
