@@ -7,6 +7,7 @@
 #' files: the list of nodes in JSON format and an HTML page to load the tree.
 #'
 #' @param xlsFileName name of xls file containing the tables
+#' @param outputPath path where to write the html and json files
 #'
 #' @return A tree for each sheet in JSON format and an HTML page to load each
 #' tree.
@@ -15,7 +16,7 @@
 #' # writeMapTrees(system.file('table.xls', package = 'treeMap'))
 #'
 
-writeMapTrees <- function(xlsFileName) {
+writeMapTrees <- function(xlsFileName, outputPath = NULL) {
 
   # xlsFileName <- "table.xls"
   excel.file <- file.path(xlsFileName)
@@ -31,12 +32,22 @@ writeMapTrees <- function(xlsFileName) {
     sheetPosition <- as.numeric(getSheetPos(object=wb,sheet=sheetName))
 
     #write JSON file
-    fileConn<-file(paste("tree",sheetPosition,".json",sep=""))
+    if (is.null(outputPath)) {
+      fileConn<-file(paste("tree",sheetPosition,".json",sep=""))
+    }else{
+      fileConn<-file(paste(outputPath,"/tree",sheetPosition,".json",sep=""))
+    }
+
     writeLines(jsonOut, fileConn)
     close(fileConn)
 
     #write HTML file
-    fileConn<-file(paste("tree",sheetPosition,".html",sep=""))
+    if (is.null(outputPath)) {
+      fileConn<-file(paste("tree",sheetPosition,".html",sep=""))
+    }else{
+      fileConn<-file(paste(outputPath,"/tree",sheetPosition,".html",sep=""))
+    }
+
     htmlOut <- readLines(system.file("template.html", package = 'treeMap'),-1)
     htmlOut[50]=paste("d3.json('tree",sheetPosition,".json', function(error, flare) {",sep="")
     writeLines(htmlOut, fileConn)

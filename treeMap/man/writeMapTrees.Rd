@@ -3,10 +3,12 @@
 \alias{writeMapTrees}
 \title{Function to write the map tree.}
 \usage{
-writeMapTrees(xlsFileName)
+writeMapTrees(xlsFileName, outputPath = NULL)
 }
 \arguments{
 \item{xlsFileName}{name of xls file containing the tables}
+
+\item{outputPath}{path where to write the html and json files}
 }
 \value{
 A tree for each sheet in JSON format and an HTML page to load each

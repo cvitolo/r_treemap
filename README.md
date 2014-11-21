@@ -26,10 +26,10 @@ library(treeMap)
 ```
 
 #### Run a test
-writeMapTrees(system.file('table.xls', package = 'treeMap'))
+writeMapTrees(system.file('table.xls', package = 'treeMap'),outputPath="~")
 
 #### Use your own excel file
-writeMapTrees('~/myfile.xls')
+writeMapTrees('~/myfile.xls',outputPath="~")
 
 ##### Warnings
 This package and functions herein are part of an experimental open-source project. They are provided as is, without any guarantee.
