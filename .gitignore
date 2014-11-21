@@ -11,3 +11,5 @@
 # Others
 treeMap/.Rbuildignore
 treeMap/treeMap.Rproj
+
+*.tar.gz

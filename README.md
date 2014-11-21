@@ -7,4 +7,8 @@ The package treeMap is a set of function that automatically generates tree maps 
 
 library(treeMap)
 
+# test 
 writeMapTrees(system.file('table.xls', package = 'treeMap'))
+
+# use your own excel file
+writeMapTrees('~/myfile.xls')
