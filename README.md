@@ -12,7 +12,7 @@ I assume you use Linux Ubuntu. Go to terminal and run the following commands:
 
 Back in R, install dependent packages from CRAN:
 ```R
-x <- c("rJava", "XLConnect", "RJSONIO","devtools")
+x <- c("XLConnect", "RJSONIO","devtools")
 install.packages(x)
 
 # load the packages
@@ -21,7 +21,7 @@ lapply(x, require, character.only=T); rm(x)
 
 Now install the treemap package from github:
 ```R
-install_github("cvitolo/r_treemap", subdir = "treemap")
+install_github("cvitolo/r_treemap", subdir = "treeMap")
 library(treeMap)
 ```
 
