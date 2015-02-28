@@ -1,8 +1,13 @@
 TreeMap (R package)
 ================================================
 
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.15719.svg)](http://dx.doi.org/10.5281/zenodo.15719)
+
 The package treeMap contains a set of functions to automatically generate D3.js 
 tree maps for each sheet in a given excel file. 
+
+**To cite this software:**  
+Vitolo C., TreeMap (R package), (2014), GitHub repository, https://github.com/cvitolo/r_treemap, doi: http://dx.doi.org/10.5281/zenodo.15719
 
 ##### Basics
 I assume you use Linux Ubuntu. Go to terminal and run the following commands:
